@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #141e30, #243b55);
+min-height: 100vh;
+color: white;
+padding: 30px 15px;
+}
+
+.music-container {
+max-width: 950px;
+margin: auto;
+background: rgba(255, 255, 255, 0.08);
+backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.12);
+border-radius: 25px;
+padding: 30px;
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 35px;
+}
+
+header h2 {
+font-size: 26px;
+color: #00e5ff;
+}
+
+header button,
+.controls button,
+.volume-container button {
+background: none;
+border: none;
+color: white;
+font-size: 20px;
+cursor: pointer;
+}
+
+#themeBtn {
+background: rgba(255, 255, 255, 0.12);
+padding: 12px;
+border-radius: 50%;
+}
+
+.player {
+max-width: 450px;
+margin: auto;
+text-align: center;
+}
+
+.album-art {
+width: 260px;
+height: 260px;
+margin: auto;
+border-radius: 22px;
+overflow: hidden;
+box-shadow: 0 12px 35px rgba(0, 229, 255, 0.2);
+}
+
+.album-art img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.song-info {
+margin: 25px 0;
+}
+
+.song-info h2 {
+font-size: 23px;
+margin-bottom: 5px;
+}
+
+.song-info p {
+color: #b9c5d5;
+font-size: 14px;
+}
+
+.progress-container {
+margin: 25px 0;
+}
+
+.progress-bar {
+height: 6px;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 10px;
+cursor: pointer;
+}
+
+.progress {
+height: 100%;
+width: 0%;
+background: #00e5ff;
+border-radius: 10px;
+}
+
+.time {
+display: flex;
+justify-content: space-between;
+font-size: 12px;
+color: #c5d0df;
+margin-top: 10px;
+}
+
+.controls {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 25px;
+margin: 30px 0;
+}
+
+.controls button {
+transition: 0.3s;
+}
+
+.controls button:hover {
+color: #00e5ff;
+transform: scale(1.15);
+}
+
+.play-btn {
+width: 65px;
+height: 65px;
+background: #00e5ff !important;
+color: #14213d !important;
+border-radius: 50%;
+font-size: 25px !important;
+}
+
+.volume-container {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 15px;
+margin: 25px 0;
+}
+
+#volume {
+width: 150px;
+accent-color: #00e5ff;
+cursor: pointer;
+}
+
+.favorite-btn {
+background: rgba(255, 255, 255, 0.12);
+color: white;
+border: none;
+padding: 12px 22px;
+border-radius: 25px;
+cursor: pointer;
+margin-top: 10px;
+transition: 0.3s;
+}
+
+.favorite-btn:hover {
+background: #ff477e;
+}
+
+.playlist-section {
+margin-top: 50px;
+}
+
+.playlist-section h3 {
+margin-bottom: 20px;
+color: #00e5ff;
+}
+
+.playlist-item {
+display: flex;
+align-items: center;
+gap: 15px;
+padding: 13px;
+border-radius: 12px;
+margin-bottom: 10px;
+background: rgba(255, 255, 255, 0.07);
+cursor: pointer;
+transition: 0.3s;
+}
+
+.playlist-item:hover,
+.playlist-item.active {
+background: rgba(0, 229, 255, 0.18);
+}
+
+.playlist-item img {
+width: 48px;
+height: 48px;
+border-radius: 8px;
+object-fit: cover;
+}
+
+.playlist-item .track-info {
+flex: 1;
+text-align: left;
+}
+
+.playlist-item h4 {
+font-size: 14px;
+}
+
+.playlist-item p {
+font-size: 12px;
+color: #b9c5d5;
+}
+
+@media (max-width: 600px) 
+{
+body {
+padding: 15px 10px;}
+.music-container {
+    padding: 20px 15px;
+}
+
+.album-art {
+    width: 220px;
+    height: 220px;
+}
+
+.controls {
+    gap: 18px;
+}
+
+.controls button {
+    font-size: 17px;
+}
+
+.play-btn {
+    width: 55px;
+    height: 55px;
+}
+
+.song-info h2 {
+    font-size: 20px;
+} 
+}
+/* LIGHT THEME */
+
+body.light-theme {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+body.light-theme .music-player {
+    background: #ffffff;
+    color: #1e293b;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .playlist-item {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+body.light-theme .playlist-item.active {
+    background: #cbd5e1;
+}
+
+body.light-theme button {
+    color: #1e293b;
+}
+
+body.light-theme .track-info span {
+    color: #64748b;
+}
