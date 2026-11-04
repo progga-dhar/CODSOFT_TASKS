@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: 'Poppins', sans-serif;
+background: #f4f6fb;
+color: #263238;
+}
+
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 40px auto;
+}
+
+header {
+text-align: center;
+margin-bottom: 35px;
+}
+
+header h1 {
+font-size: 32px;
+color: #25316d;
+margin-bottom: 8px;
+}
+
+header p {
+color: #777;
+font-size: 14px;
+}
+
+/* Summary Cards */
+
+.summary {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 22px;
+margin-bottom: 35px;
+}
+
+.card {
+padding: 25px;
+border-radius: 14px;
+color: white;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+transition: transform 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-5px);
+}
+
+.card h3 {
+font-size: 15px;
+font-weight: 500;
+margin-bottom: 12px;
+}
+
+.card h2 {
+font-size: 27px;
+font-weight: 700;
+}
+
+.income-card {
+background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.expense-card {
+background: linear-gradient(135deg, #eb3349, #f45c43);
+}
+
+.balance-card {
+background: linear-gradient(135deg, #396afc, #2948ff);
+}
+
+/* Sections */
+
+.transaction-section,
+.history-section {
+background: white;
+padding: 28px;
+border-radius: 14px;
+margin-bottom: 30px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-section h2,
+.history-section h2 {
+font-size: 21px;
+color: #25316d;
+margin-bottom: 22px;
+}
+
+/* Form */
+
+#transaction-form {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+}
+
+.form-group label {
+font-size: 14px;
+font-weight: 600;
+margin-bottom: 8px;
+}
+
+input,
+select {
+width: 100%;
+padding: 12px;
+border: 1px solid #dce1ec;
+border-radius: 8px;
+font-family: inherit;
+font-size: 14px;
+outline: none;
+background: white;
+}
+
+input:focus,
+select:focus {
+border-color: #396afc;
+box-shadow: 0 0 5px rgba(57, 106, 252, 0.2);
+}
+
+button {
+border: none;
+cursor: pointer;
+font-family: inherit;
+font-weight: 600;
+}
+
+#submit-btn {
+grid-column: span 2;
+padding: 13px;
+background: #25316d;
+color: white;
+border-radius: 8px;
+font-size: 15px;
+transition: 0.3s;
+}
+
+#submit-btn:hover {
+background: #396afc;
+}
+
+/* Transaction History */
+
+.history-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+margin-bottom: 20px;
+}
+
+.history-header h2 {
+margin-bottom: 0;
+}
+
+#filter-category {
+max-width: 200px;
+}
+
+.table-container {
+width: 100%;
+overflow-x: auto;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+min-width: 650px;
+}
+
+thead {
+background: #f0f3fa;
+}
+
+th,
+td {
+padding: 15px 12px;
+text-align: left;
+border-bottom: 1px solid #edf0f5;
+font-size: 13px;
+}
+
+th {
+color: #25316d;
+font-weight: 600;
+}
+
+td {
+color: #555;
+}
+
+#empty-message {
+text-align: center;
+color: #999;
+padding: 20px;
+font-size: 14px;
+}
+
+/* Action Buttons */
+
+.edit-btn,
+.delete-btn {
+padding: 7px 11px;
+border-radius: 5px;
+color: white;
+font-size: 12px;
+margin: 2px;
+}
+
+.edit-btn {
+background: #396afc;
+}
+
+.delete-btn {
+background: #eb3349;
+}
+
+.edit-btn:hover {
+background: #244bc7;
+}
+
+.delete-btn:hover {
+background: #c82333;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) 
+{
+}
+.container {
+    width: 94%;
+    margin: 25px auto;
+}
+
+.summary {
+    grid-template-columns: 1fr;
+}
+
+#transaction-form {
+    grid-template-columns: 1fr;
+}
+
+#submit-btn {
+    grid-column: span 1;
+}
+
+.history-header {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#filter-category {
+    max-width: 100%;
+}
+
+header h1 {
+    font-size: 26px;
+}
+
+.transaction-section,
+.history-section {
+    padding: 18px;
+}
+/* Financial Insights */
+
+.insights-section {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.insights-section h2 {
+    color: #25316d;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.insights-card {
+    background: #f0f3ff;
+    border-left: 5px solid #396afc;
+    padding: 20px;
+    border-radius: 8px;
+    line-height: 1.8;
+    color: #444;
+}
+
+#financial-insight {
+    font-size: 14px;
+}
+/* Expense Analytics */
+
+.charts-section {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.charts-section h2 {
+    color: #25316d;
+    font-size: 21px;
+    margin-bottom: 22px;
+}
+
+.chart-container {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.chart-container h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.chart-container canvas {
+    max-height: 350px;
+}
+
+@media (max-width: 768px) {
+
+    .charts-section {
+        padding: 18px;
+    }
+
+    .chart-container {
+        width: 100%;
+    }
+
+}
+/* Download Report Button */
+
+.download-btn {
+    background: #11998e;
+    color: white;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #0d786f;
+    transform: translateY(-2px);
+}
